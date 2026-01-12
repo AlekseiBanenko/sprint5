@@ -18,7 +18,7 @@ type Training struct {
 	personaldata.Personal
 }
 
-func (t *Training) Parse(datastring string) (err error) {
+ffunc (t *Training) Parse(datastring string) (err error) {
     parts := strings.Split(datastring, ",")
     if len(parts) != 3 {
         return errors.New("некорректный формат строки")
@@ -28,9 +28,9 @@ func (t *Training) Parse(datastring string) (err error) {
     if err != nil {
         return err
     }
-    **if steps <= 0 {
+    if steps <= 0 {                      
         return errors.New("некорректное количество шагов")
-    }**
+    }
     t.Steps = steps
 
     t.TrainingType = parts[1]
@@ -39,12 +39,13 @@ func (t *Training) Parse(datastring string) (err error) {
     if err != nil {
         return err
     }
-    **if t.Duration <= 0 {
+    if t.Duration <= 0 {                 
         return errors.New("некорректная продолжительность")
-    }**
+    }
 
     return nil
 }
+
 
 func (t Training) ActionInfo() (string, error) {
 	if t.Steps == 0 || t.Duration == 0 {
