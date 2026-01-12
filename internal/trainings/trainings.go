@@ -71,13 +71,11 @@ func (t Training) ActionInfo() (string, error) {
 	}
 
 	return fmt.Sprintf(
-		"%s\n"+
-			"Тип тренировки: %s\n"+
+		"Тип тренировки: %s\n"+
 			"Длительность: %.2f ч.\n"+
 			"Дистанция: %.2f км.\n"+
 			"Скорость: %.2f км/ч\n"+
-			"Сожгли калорий: %.2f",
-		t.Name,
+			"Сожгли калорий: %.2f\n",
 		t.TrainingType,
 		t.Duration.Hours(),
 		dist,
