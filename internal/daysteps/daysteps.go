@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"personaldata"
-	"spentenergy"
+	"github.com/Yandex-Practicum/tracker/internal/personaldata"
+	"github.com/Yandex-Practicum/tracker/internal/spentenergy"
 )
 
 type DaySteps struct {
