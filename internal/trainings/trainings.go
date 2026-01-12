@@ -6,15 +6,15 @@ import (
 	"strings"
 	"time"
 
-	"personaldata"
-	"spentenergy"
+	"github.com/Yandex-Practicum/tracker/internal/personaldata"
+	"github.com/Yandex-Practicum/tracker/internal/spentenergy"
 )
 
 type Training struct {
 	Steps        int
 	TrainingType string
 	Duration     time.Duration
-	Personal     personaldata.Personal
+	personaldata.Personal
 }
 
 func (t *Training) Parse(datastring string) (err error) {
