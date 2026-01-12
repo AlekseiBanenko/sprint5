@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"internal/personaldata"
-	"internal/spentenergy"
+	"personaldata"
+	"spentenergy"
 )
 
 type DaySteps struct {
